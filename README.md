@@ -1,6 +1,11 @@
 # CyPress for SAPui5
 ## Description
-The helper will handle perfectly the SAPui5 specifications. 
+This is an non-official add-onn for CyPRess which give the capabilities to manage UI5 control easily.
+
+I will put in it as much as functions to help the use of CyPress dealing with SAPui5 world.
+
+Please fill free to participate and contribute to that project.
+
 ## Installation
 
 > npm install cypress-sapui5
@@ -26,7 +31,7 @@ Add the import/require in the CypRess *support/index.js* file:
 
 ```js
     require('cypress-wait-until')
-    equire('cypress-sapui5')
+    require('cypress-sapui5')
 ```
 
 Be sure that in your *package.json* in *devDependencies* you have:
