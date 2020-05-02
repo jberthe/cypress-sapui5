@@ -1,7 +1,7 @@
 {
   "name": "cypress-sapui5",
-  "version": "1.0.2",
-  "description": "Tools for cypress and SAPui5 Framework",
+  "version": "1.0.3",
+  "description": "Give cypress a SAPui5 Framework capabilities",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,6 +9,20 @@
   "devDependencies": {
     "cypress-wait-until": "^1.6.1"
   },
-  "author": "",
-  "license": "ISC"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jberthe/cypress-sapui5.git"
+  },
+  "author": "Joseph BERTHE",
+  "license": "Apache 2.0",
+  "keywords": [
+    "cypress",
+    "ui5",
+    "sapui5",
+    "sap"
+  ],
+  "bugs": {
+    "url": "https: //github.com/jberthe/cypress-sapui5/issues"
+  },
+  "homepage": "https://github.com/jberthe/cypress-sapui5/#readme"
 }
