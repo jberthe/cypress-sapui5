@@ -1,0 +1,14 @@
+{
+  "name": "cypress-sapui5",
+  "version": "1.0.2",
+  "description": "Tools for cypress and SAPui5 Framework",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "cypress-wait-until": "^1.6.1"
+  },
+  "author": "",
+  "license": "ISC"
+}
