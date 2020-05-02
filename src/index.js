@@ -63,8 +63,6 @@ Cypress.Commands.add("ui5BasicAuth", (user, pass, serviceURL) => {
         expect(response.status).to.be.equal(200)
         Cypress.Cookies.preserveOnce('SAP_SESSIONID_' + Cypress.env("ui5").sap_sid + '_' + Cypress.env("ui5").sap_client)
     })
-
-
 })
 
 /**
@@ -114,18 +112,23 @@ Cypress.Commands.add("ui5SelectTableLine", (sIdControl, sCompareContent) => {
     })
 })
 
+/**
+ * Select a key from sap.m.ComboBox control
+ */
 Cypress.Commands.add("ui5SelectComboBoxKey", (sIdControl, sKey) => {
     cy.ui5Get(sIdControl).then((oUI5Control) => {
         oUI5Control.setSelectedKey(sKey)
     })
 })
 
+/**
+ * Select/Tap to an iten from sap.m.table control.
+ */
 Cypress.Commands.add("ui5SelectInList", (sIdControl, sCompareContent) => {
     cy.ui5Get(sIdControl).then((oUI5Control) => {
         var tItems = oUI5Control.getAggregation("items");
 
         tItems.forEach((item, idx) => {
-            // Take the innerHTML from all line content and get the index.
             if (item.getDomRef().innerText && item.getDomRef().innerText.indexOf(sCompareContent) >= 0) {
                 cy.get('#' + item.getDomRef().id).click({ force: true });
             }

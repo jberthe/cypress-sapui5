@@ -8,7 +8,7 @@ Please fill free to participate and contribute to that project.
 
 ## Installation
 
-> npm install cypress-sapui5
+> npm install cypress-sapui5 --dev-install
 
 - Add the following in the *cypress.json* 
 
