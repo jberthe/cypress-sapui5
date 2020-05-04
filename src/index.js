@@ -54,10 +54,10 @@ Cypress.Commands.add("ui5Login", (sUrl, user, pass) => {
 
 Cypress.Commands.add("ui5BasicAuth", (user, pass, serviceURL) => {
     cy.request({
-        url: Cypress.env("ui5").serviceURL,
+        url: serviceURL || Cypress.env("ui5").serviceURL,
         auth: {
-            user: user,
-            pass: pass
+            user: user || Cypress.env("ui5").auth.user,
+            pass: pass || Cypress.env("ui5").auth.pass
         }
     }).then((response) => {
         expect(response.status).to.be.equal(200)
@@ -135,4 +135,18 @@ Cypress.Commands.add("ui5SelectInList", (sIdControl, sCompareContent) => {
         });
     }
     )
+})
+
+Cypress.Commands.add("ui5ForEachItems", (sIdControl, fnCallback) => {
+    cy.ui5Get(sIdControl).then((oUI5Control) => {
+        var tItems = oUI5Control.getAggregation("items");
+            return tItems.reduce((promiseChain, item) => {
+                return promiseChain.then(() => {
+                    return fnCallback(item)
+                })
+            }, Cypress.Promise.resolve())
+        
+
+    })
+
 })
