@@ -8,7 +8,7 @@ Please fill free to participate and contribute to that project.
 
 The full documentation is based on the [Wiki page here](https://github.com/jberthe/cypress-sapui5/wiki).
 
-[![CyPress with Fiori Element application](https://i9.ytimg.com/vi/ddNqmIqvDws/mq3.jpg?sqp=CKjavvUF&rs=AOn4CLDBVG28aWTjnKtjPsKfx1Ux4H5RjQ)](https://www.youtube.com/embed/ddNqmIqvDws?autoplay=1&loop=1&playlist=ddNqmIqvDws)
+[![CyPress with Fiori Element application](https://img.youtube.com/vi/ddNqmIqvDws/0.jpg)](https://www.youtube.com/embed/ddNqmIqvDws?autoplay=1&loop=1&playlist=ddNqmIqvDws)
 
 ## Installation
 
