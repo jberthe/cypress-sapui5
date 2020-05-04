@@ -10,6 +10,7 @@ The full documentation is based on the [Wiki page here](https://github.com/jbert
 
 <iframe width="420" height="345" src="https://www.youtube.com/embed/ddNqmIqvDws?autoplay=1&loop=1&playlist=ddNqmIqvDws" frameborder="0" allowfullscreen></iframe>
 
+[![CyPress with Fiori Element application](https://i.imgur.com/vKb2F1B.png)](https://www.youtube.com/embed/ddNqmIqvDws?autoplay=1&loop=1&playlist=ddNqmIqvDws)
 ## Installation
 
 > npm install cypress-sapui5 --dev-install
