@@ -45,12 +45,15 @@ Be sure that in your *package.json* in *devDependencies* you have:
 ```json
 ...,
 "cypress-wait-until": "^1.6.1",
-"cypress-sapui5": "^1.0.2"
+"cypress-sapui5": "^1.1.1"
 ...
 ```
 
 ## Release
-### Version 1.1.0
+### Version v1.1.1
+* Add timeout on visit command for ui5Login
+
+### Version v1.1.0
 * add ui5ForEachItems function
 * add Wiki page documentation
 * clear the documentation

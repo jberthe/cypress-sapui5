@@ -37,7 +37,7 @@ Cypress.Commands.add("ui5Login", (sUrl, user, pass) => {
             const href = $a.prop('href')
 
             // and now visit the href directly
-            cy.visit(href).then(() => {
+            cy.visit(href, { timeout: 30000 }).then(() => {
                 if (!user) {
                     user = Cypress.env("ui5").auth.user
                 }
@@ -53,6 +53,7 @@ Cypress.Commands.add("ui5Login", (sUrl, user, pass) => {
 })
 
 Cypress.Commands.add("ui5BasicAuth", (user, pass, serviceURL) => {
+    debugger;
     cy.request({
         url: serviceURL || Cypress.env("ui5").serviceURL,
         auth: {
