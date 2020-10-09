@@ -50,6 +50,9 @@ Be sure that in your *package.json* in *devDependencies* you have:
 ```
 
 ## Release
+### Version v1.1.2
+* Corr: when basic auth not available
+
 ### Version v1.1.1
 * Add timeout on visit command for ui5Login
 
