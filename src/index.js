@@ -38,13 +38,15 @@ Cypress.Commands.add("ui5Login", (sUrl, user, pass) => {
 
             // and now visit the href directly
             cy.visit(href, { timeout: 30000 }).then(() => {
-                if (!user) {
-                    user = Cypress.env("ui5").auth.user
+                if (Cypress.env("ui5").auth) {
+                    if (!user) {
+                        user = Cypress.env("ui5").auth.user
+                    }
+                    if (!pass) {
+                        pass = Cypress.env("ui5").auth.pass
+                    }
+                    cy.ui5BasicAuth(user, pass)
                 }
-                if (!pass) {
-                    pass = Cypress.env("ui5").auth.pass
-                }
-                cy.ui5BasicAuth(user, pass)
             })
 
         })
@@ -141,12 +143,12 @@ Cypress.Commands.add("ui5SelectInList", (sIdControl, sCompareContent) => {
 Cypress.Commands.add("ui5ForEachItems", (sIdControl, fnCallback) => {
     cy.ui5Get(sIdControl).then((oUI5Control) => {
         var tItems = oUI5Control.getAggregation("items");
-            return tItems.reduce((promiseChain, item) => {
-                return promiseChain.then(() => {
-                    return fnCallback(item)
-                })
-            }, Cypress.Promise.resolve())
-        
+        return tItems.reduce((promiseChain, item) => {
+            return promiseChain.then(() => {
+                return fnCallback(item)
+            })
+        }, Cypress.Promise.resolve())
+
 
     })
 
